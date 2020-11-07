@@ -17,16 +17,44 @@
       <button id="start-btn" onclick="start();">Get started</button>
     </div>
 
-    <div class="box" id="login" style="display: none">
-      {% for item in site.data.items %}
-      <div
-        class="card"
-        id="card-{{ item.id }}"
-        onclick="select('{{ item.id }}')"
-      >
-        <p>{{ item.name }}</p>
+    <div id="box-container">
+      <div class="box">
+        <div class="tabs">
+          <button
+            class="tab-btn active"
+            onclick="handleTabClick(event, 'fruits')"
+          >
+            Fruits
+          </button>
+          <button class="tab-btn" onclick="handleTabClick(event, 'vegetables')">
+            Vegetables
+          </button>
+        </div>
+
+        <div id="fruits" class="tabcontent" style="display: grid">
+          {% for item in site.data.fruits %}
+          <div
+            class="card"
+            id="card-{{ item.id }}"
+            onclick="select('{{ item.id }}')"
+          >
+            <p>{{ item.name }}</p>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div id="vegetables" class="tabcontent">
+          {% for item in site.data.vegetables %}
+          <div
+            class="card"
+            id="card-{{ item.id }}"
+            onclick="select('{{ item.id }}')"
+          >
+            <p>{{ item.name }}</p>
+          </div>
+          {% endfor %}
+        </div>
       </div>
-      {% endfor %}
     </div>
 
     <script src="script.js"></script>
