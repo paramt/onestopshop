@@ -1,0 +1,146 @@
+---
+---
+
+$primary-color: #171721;
+$secondary-color: #d1d1d1;
+$selected-color: #c7ffc9;
+$bg-color: #2e2f4a;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.7s;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 100px;
+  color: white;
+  line-height: 1;
+}
+
+h1 .light {
+  font-size: 60px;
+  font-weight: 200;
+  transition: opacity 0.5s;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 200;
+  color: white;
+  margin-top: 0;
+}
+
+p {
+  color: $primary-color;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  padding: 10px;
+  font-size: 25px;
+  font-family: "Open Sans";
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: $primary-color;
+  color: white;
+  width: 300px;
+  margin: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: darken($primary-color, 5%);
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+#start-btn {
+  transition: opacity 0.5s;
+}
+
+.box {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.card {
+  align-self: center;
+  justify-self: center;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: $secondary-color;
+  cursor: pointer;
+  border: 2px solid $primary-color;
+
+  &:hover {
+    background-color: darken($secondary-color, 5%);
+  }
+
+  &.selected {
+    background-color: $selected-color;
+    border: 2px solid green;
+
+    &:hover {
+      background-color: darken($selected-color, 5%);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  h1 .light {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  .box {
+    width: 300px;
+  }
+
+  input,
+  textarea,
+  select,
+  .box button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
