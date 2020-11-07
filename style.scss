@@ -152,6 +152,11 @@ button:disabled {
   }
 }
 
+#submit {
+  width: 100%;
+  margin-top: 50px;
+}
+
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 70px;
