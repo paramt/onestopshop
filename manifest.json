@@ -1,0 +1,21 @@
+{
+  "name": "1StopShop",
+  "short_name": "1StopShop",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2e2f4a",
+  "theme_color": "#1f2033",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
