@@ -157,9 +157,15 @@ button:disabled {
   margin-top: 50px;
 }
 
+@media only screen and (max-width: 850px) {
+  #box-container {
+    width: 600px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   h1 .light {
@@ -170,16 +176,12 @@ button:disabled {
     font-size: 35px;
   }
 
-  .box {
-    width: 300px;
-  }
-
   input,
   textarea,
   select,
-  .box button {
+  #box-container,
+  #submit {
     width: 100%;
-    box-sizing: border-box;
   }
 }
 
