@@ -1,0 +1,4 @@
+//sql data
+
+//create items
+CREATE TABLE QVV90408."001" ( Id FLOAT(53) NOT NULL ,Loblaws FLOAT(53) NOT NULL ,Metro FLOAT(53) NOT NULL ,Superstore FLOAT(53) NOT NULL ,Walmart FLOAT(53) NOT NULL )           ORGANIZE BY COLUMN
