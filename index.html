@@ -6,6 +6,13 @@
   <head>
     {% include meta.html %}
 
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
     <title>{{ site.title }}</title>
     <meta name="title" content="{{ site.description }}" />
     <meta name="description" content="{{ site.description }}" />
@@ -34,11 +41,56 @@
         <div id="fruits" class="tabcontent" style="display: grid">
           {% for item in site.data.fruits %}
           <div
-            class="card"
-            id="card-{{ item.id }}"
-            onclick="select('{{ item.id }}')"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: relative;
+            "
           >
-            <p>{{ item.name }}</p>
+            <div
+              class="card"
+              id="card-{{ item.id }}"
+              onclick="select('{{ item.id }}')"
+            >
+              <p>{{ item.name }}</p>
+              <img src="{{site.url}}/{{item.img}}" />
+            </div>
+
+            <div
+              id="arrow-{{ item.id }}"
+              class="dropdown-arrow"
+              onclick="dropdown('{{ item.id }}')"
+            >
+              <i class="fas fa-caret-down"></i>
+            </div>
+
+            <div class="dropdown-content" id="dropdown-{{ item.id }}">
+              <button
+                class="selected select-{{ item.id }}"
+                id="select-{{ item.1-id }}"
+                onclick="selectType('{{ item.1-id }}', '{{ item.id }}')"
+              >
+                {{ item.1-name }}
+              </button>
+              {% if item.2-name %}
+              <button
+                class="select-{{ item.id }}"
+                id="select-{{ item.2-id }}"
+                onclick="selectType('{{ item.2-id }}', '{{ item.id }}')"
+              >
+                {{ item.2-name }}
+              </button>
+              {% endif %} {% if item.3-name %}
+              <button
+                class="select-{{ item.id }}"
+                id="select-{{ item.3-id }}"
+                onclick="selectType('{{ item.3-id }}', '{{ item.id }}')"
+              >
+                {{ item.3-name }}
+              </button>
+              {% endif %}
+            </div>
           </div>
           {% endfor %}
         </div>
@@ -46,11 +98,56 @@
         <div id="vegetables" class="tabcontent">
           {% for item in site.data.vegetables %}
           <div
-            class="card"
-            id="card-{{ item.id }}"
-            onclick="select('{{ item.id }}')"
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: relative;
+            "
           >
-            <p>{{ item.name }}</p>
+            <div
+              class="card"
+              id="card-{{ item.id }}"
+              onclick="select('{{ item.id }}')"
+            >
+              <p>{{ item.name }}</p>
+              <img src="{{site.url}}/{{item.img}}" />
+            </div>
+
+            <div
+              id="arrow-{{ item.id }}"
+              class="dropdown-arrow"
+              onclick="dropdown('{{ item.id }}')"
+            >
+              <i class="fas fa-caret-down"></i>
+            </div>
+
+            <div class="dropdown-content" id="dropdown-{{ item.id }}">
+              <button
+                class="selected select-{{ item.id }}"
+                id="select-{{ item.1-id }}"
+                onclick="selectType('{{ item.1-id }}', '{{ item.id }}')"
+              >
+                {{ item.1-name }}
+              </button>
+              {% if item.2-name %}
+              <button
+                class="select-{{ item.id }}"
+                id="select-{{ item.2-id }}"
+                onclick="selectType('{{ item.2-id }}', '{{ item.id }}')"
+              >
+                {{ item.2-name }}
+              </button>
+              {% endif %} {% if item.3-name %}
+              <button
+                class="select-{{ item.id }}"
+                id="select-{{ item.3-id }}"
+                onclick="selectType('{{ item.3-id }}', '{{ item.id }}')"
+              >
+                {{ item.3-name }}
+              </button>
+              {% endif %}
+            </div>
           </div>
           {% endfor %}
         </div>

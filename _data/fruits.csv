@@ -1,6 +1,11 @@
-id,name
-2001,Apple
-2002,Banana
-2003,Grapes
-2004,Blueberry
-2005,Strawberry
+id,name,img,1-id,1-name,2-id,2-name,3-id,3-name
+001.1,Apples,assets/icons/apple.png,001.1,Honeycrisp,001.02,Granny Smith
+002.1,Oranges,assets/icons/oranges.png
+003.1,Bananas,assets/icons/bananas.png
+004.1,Strawberries,assets/icons/strawberry.png
+005.1,Apricots,assets/icons/apricot.png
+006.1,Blackberries,assets/icons/blackberry.png
+007.1,Nectarines,assets/icons/nectarine.png
+008.1,Blueberries,assets/icons/blueberries.png
+009.1,Cantaloupes,assets/icons/canteloupe.png
+010.1,Cherries,assets/icons/cherries.png
