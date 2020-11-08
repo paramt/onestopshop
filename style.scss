@@ -2,8 +2,9 @@
 ---
 
 $primary-color: #290405;
-$secondary-color: #d1d1d1;
-$selected-color: #c7ffc9;
+$secondary-color: #290405;
+$gray: #d1d1d1;
+$selected-color: #ff8588;
 $bg-color: #921b1d;
 
 html {
@@ -102,13 +103,19 @@ button:disabled {
 }
 
 .tab-btn {
+  background-color: $secondary-color;
   margin: 0;
   width: 100%;
   font-size: 20px;
   width: 100%;
 
   &.active {
-    background-color: darken($primary-color, 5%);
+    background-color: darken($secondary-color, 10%);
+    cursor: auto;
+  }
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
   }
 }
 
@@ -124,7 +131,7 @@ button:disabled {
   padding: 20px;
   display: none;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 30px 10px;
 }
 
 .card {
@@ -138,23 +145,18 @@ button:disabled {
   width: 100px;
   height: 150px;
   border-radius: 5px 5px 0 0;
-  background-color: $secondary-color;
+  background-color: $gray;
   cursor: pointer;
-  border-style: solid;
-  border-width: 2px 2px 0 2px;
-  border-color: $primary-color;
   transition: filter 0.2s;
   margin-bottom: 0;
+  padding: 0 10px;
 
   &:hover {
-    background-color: darken($secondary-color, 5%);
+    background-color: darken($gray, 5%);
   }
 
   &.selected {
     background-color: $selected-color;
-    border-style: solid;
-    border-width: 2px 2px 0 2px;
-    border-color: green;
 
     &:hover {
       background-color: darken($selected-color, 5%);
@@ -172,21 +174,17 @@ button:disabled {
 
 .dropdown-arrow {
   height: 25px;
-  width: 100px;
+  width: 120px;
   border-radius: 0 0 5px 5px;
-  border: 2px solid black;
-  background-color: $secondary-color;
+  background-color: $gray;
 
   &:hover {
-    background-color: darken($secondary-color, 5%);
+    background-color: darken($gray, 5%);
     cursor: pointer;
   }
 
   &.selected {
     background-color: $selected-color;
-    border-style: solid;
-    border-width: 2px;
-    border-color: green;
 
     &:hover {
       background-color: darken($selected-color, 5%);
@@ -198,8 +196,8 @@ button:disabled {
   z-index: 2;
   display: none;
   position: absolute;
-  top: 181px;
-  width: 100px;
+  top: 175px;
+  width: 150px;
 
   button {
     margin: 0;
@@ -207,7 +205,7 @@ button:disabled {
     border-radius: 0;
     background-color: #c9deff;
     color: black;
-    font-size: 20px;
+    font-size: 16px;
 
     &:hover {
       background-color: darken(#c9deff, 5%);

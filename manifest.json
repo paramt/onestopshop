@@ -3,8 +3,8 @@
   "short_name": "1StopShop",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#2e2f4a",
-  "theme_color": "#1f2033",
+  "background_color": "#921b1d",
+  "theme_color": "#290405",
   "orientation": "portrait-primary",
   "icons": [
     {
