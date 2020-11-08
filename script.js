@@ -100,21 +100,72 @@ function submit() {
     document.getElementById("box-container").style.display = "none";
   }, 1000);
 
-  var xhr = new XMLHttpRequest();
-  var url = "";
-  xhr.open("GET", url, true);
-  xhr.setRequestHeader("Content-Type", "application/json");
+  document.getElementById("results").style.display = "block";
+  document.getElementById("results").classList.add("animate__fadeInRight");
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 201) {
-      var json = JSON.parse(xhr.responseText);
-      document.getElementById("results").style.display = "block";
-      document.getElementById("results").classList.add("animate__fadeInRight");
-      document.getElementById("results-header").innerHTML = json[0];
-    }
+  var innerHTML = "";
+
+  for (var i = 0; i < selectedItems.length; i++) {
+    innerHTML += "<p>" + codeToName(selectedItems[i]) + " <span style='float: right'>$" + getPrice(selectedItems[i]) + "</span></p>"
+  }
+
+  document.getElementById("results-list").innerHTML = innerHTML;
+  document.getElementById("location").innerHTML = getLocation(selectedItems);
+
+}
+
+function getPrice(id) {
+  return (Math.round(Math.random() * 500) / 100).toFixed(2);
+}
+
+function getLocation(items) {
+  return "Walmart";
+}
+
+function codeToName(code) {
+  const codes = {
+    "001.1": "Apple (Honeycrisp)",
+    "001.2": "Apple (Granny Smith)",
+    "002.1": "Orange",
+    "002.2": "Clementine",
+    "003.1": "Banana",
+    "004.1": "Strawberry",
+    "005.1": "Apricot",
+    "006.1": "Blackberries",
+    "007.1": "Nectarine",
+    "008.1": "Blueberries",
+    "009.1": "Canteloupe",
+    "010.1": "Cherries",
+    "101.1": "Carrots (mini)",
+    "101.2": "Carrots (organic)",
+    "102.1": "Potato (Russet)",
+    "102.2": "Potato (Red)",
+    "103.1": "Tomato (Roma)",
+    "103.2": "Tomato (Beefsteak)",
+    "104.1": "Onion (yellow)",
+    "104.2": "Onion (red)",
+    "105.1": "Broccoli stalks",
+    "105.2": "Broccoli crowns",
+    "106.1": "Red pepper",
+    "106.2": "Green pepper",
+    "106.3": "Yellow pepper",
+    "107.1": "Lettuce (iceberg)",
+    "107.2": "Lettuce (green leaf)",
+    "108.1": "Eggplant",
+    "108.2": "Chinese Eggplant",
+    "108.2": "Chinese Eggplant",
+    "109.1": "Cucumber (seedless)",
+    "109.2": "Cucumber (mini)",
+    "110.1": "Zucchini",
+    "110.2": "Zucchini (organic)",
+    "201.1": "Chicken",
+    "202.1": "Ground beef",
+    "202.2": "Boneless beef",
+    "203.1": "Pork (shoulder blade)",
+    "203.2": "Pork (ground)",
+    "204.1": "Salmon",
+    "204.2": "Trout",
   };
 
-  var data = JSON.stringify(selectedItems);
-
-  xhr.send(data);
+  return codes[code];
 }

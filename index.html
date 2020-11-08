@@ -207,6 +207,7 @@
                 class="select-{{ item.id }}"
                 id="select-{{ item.3-id }}"
                 onclick="selectType('{{ item.3-id }}', '{{ item.id }}')"
+              >
                 {{ item.3-name }}
               </button>
               {% endif %}
@@ -220,7 +221,9 @@
     </div>
 
     <div id="results" class="results animate__animated animate__delay-2s">
-      <h1 id="results-header"></h1>
+      <div id="results-list"></div>
+      <hr />
+      <p>Best location: <b>Walmart</b></p>
     </div>
 
     <script src="script.js"></script>
