@@ -12,6 +12,10 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <title>{{ site.title }}</title>
     <meta name="title" content="{{ site.description }}" />
@@ -153,7 +157,11 @@
         </div>
       </div>
 
-      <button id="submit">Submit</button>
+      <button id="submit" onclick="submit()">Submit</button>
+    </div>
+
+    <div id="results" class="results animate__animated animate__delay-2s">
+      <h1 id="results-header"></h1>
     </div>
 
     <script src="script.js"></script>

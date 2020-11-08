@@ -8,6 +8,7 @@ $bg-color: #2e2f4a;
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -221,6 +222,19 @@ button:disabled {
 #submit {
   width: 100%;
   margin-top: 50px;
+}
+
+.results {
+  display: none;
+  background-color: white;
+  width: 800px;
+  padding: 20px;
+  border-radius: 5px;
+
+  h1 {
+    color: $primary-color;
+    font-size: 60px;
+  }
 }
 
 @media only screen and (max-width: 850px) {

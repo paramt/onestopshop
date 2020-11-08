@@ -91,3 +91,30 @@ function selectType(id, typeID) {
   document.getElementById("arrow-" + typeID).classList.add("selected");
   selectedItems.push(id);
 }
+
+function submit() {
+  document
+    .getElementById("box-container")
+    .classList.add("animate__animated", "animate__fadeOutLeft");
+  window.setTimeout(() => {
+    document.getElementById("box-container").style.display = "none";
+  }, 1000);
+
+  var xhr = new XMLHttpRequest();
+  var url = "";
+  xhr.open("GET", url, true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 201) {
+      var json = JSON.parse(xhr.responseText);
+      document.getElementById("results").style.display = "block";
+      document.getElementById("results").classList.add("animate__fadeInRight");
+      document.getElementById("results-header").innerHTML = json[0];
+    }
+  };
+
+  var data = JSON.stringify(selectedItems);
+
+  xhr.send(data);
+}
