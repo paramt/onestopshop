@@ -1,6 +1,6 @@
 id,name,img,1-id,1-name,2-id,2-name,3-id,3-name
-001,Apples,assets/icons/apple.png,001.1,Honeycrisp,001.02,Granny Smith,,
-002,Oranges,assets/icons/oranges.png,002.1,Neval Orange,002.02,Clementines,,
+001,Apples,assets/icons/apple.png,001.1,Honeycrisp,001.2,Granny Smith,,
+002,Oranges,assets/icons/oranges.png,002.1,Neval Orange,002.2,Clementines,,
 003,Bananas,assets/icons/bananas.png,003.1,Banana,,,,
 004,Strawberries,assets/icons/strawberry.png,004.1,Strawberries,,,,
 005,Apricots,assets/icons/apricot.png,005.1,Apricot,,,,

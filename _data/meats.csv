@@ -1,5 +1,5 @@
 id,name,img,1-id,1-name,2-id,2-name,3-id,3-name
-201,Chicken,assets/icons/chicken.png,
+201,Chicken,assets/icons/chicken.png,201.1,Chicken
 202,Beef,assets/icons/beef.png,202.1,Ground Beef,202.2,Boneless Beef
 203,Pork,assets/icons/pork.png,203.1,Shoulder Blade,203.2,Ground Pork
 204,Seafood,assets/icons/seafood.png,204.1,Salmon-Fillet,204.2,Trout-Fillet
