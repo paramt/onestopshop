@@ -1,11 +1,11 @@
 id,name,img,1-id,1-name,2-id,2-name,3-id,3-name
-101,Carrots,assets/icons/carrots.png,101.1,Carrots Mini,101.2,Carrots Organic
-102,Potatoes,assets/icons/potatoes.png,102.1,Russet,102.2,Red
-103,Tomatoes,assets/icons/tomatoes.png,103.1,Roma,103.2,Beefsteak
-104,Onions,assets/icons/onion.png,104.1,Yellow,104.02,Red
-105,Broccoli,assets/icons/broccoli.png,105.1,Stalks,105.2,Crowns
+101,Carrots,assets/icons/carrots.png,101.1,Carrots Mini,101.2,Carrots Organic,,
+102,Potatoes,assets/icons/potatoes.png,102.1,Russet,102.2,Red,,
+103,Tomatoes,assets/icons/tomatoes.png,103.1,Roma,103.2,Beefsteak,,
+104,Onions,assets/icons/onion.png,104.1,Yellow,104.02,Red,,
+105,Broccoli,assets/icons/broccoli.png,105.1,Stalks,105.2,Crowns,,
 106,Peppers,assets/icons/peppers.png,106.1,Red,106.2,Green,106.3,Yellow
-107,Lettuce,assets/icons/lettuce.png,107.1,Iceberg,107.2,Green Leaf
-108,Eggplants,assets/icons/eggplant.png,108.1,Eggplant,108.2,Chinese Eggplant
-109,Cucumbers,assets/icons/cucumber.png,109.1,Seedless cucumber,109.2,Mini cucumber
-110,Zucchini,assets/icons/zucchini.png,110.1,Green,110.2,Organic
+107,Lettuce,assets/icons/lettuce.png,107.1,Iceberg,107.2,Green Leaf,,
+108,Eggplants,assets/icons/eggplant.png,108.1,Eggplant,108.2,Chinese Eggplant,,
+109,Cucumbers,assets/icons/cucumber.png,109.1,Seedless cucumber,109.2,Mini cucumber,,
+110,Zucchini,assets/icons/zucchini.png,110.1,Green,110.2,Organic,,
