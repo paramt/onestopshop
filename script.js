@@ -53,17 +53,23 @@ function select(id) {
 
 function dropdown(id) {
   const menus = document.getElementsByClassName("dropdown-content");
+  const arrows = document.getElementsByClassName("dropdown-arrow");
 
   for (var i = 0; i < menus.length; i++) {
     if (menus[i].id != "dropdown-" + id) {
       menus[i].style.display = "none";
+      arrows[i].innerHTML = "<i class='fas fa-caret-down'></i>";
     }
   }
 
   if (document.getElementById("dropdown-" + id).style.display == "block") {
     document.getElementById("dropdown-" + id).style.display = "none";
+    document.getElementById("arrow-" + id).innerHTML =
+      "<i class='fas fa-caret-down'></i>";
   } else {
     document.getElementById("dropdown-" + id).style.display = "block";
+    document.getElementById("arrow-" + id).innerHTML =
+      "<i class='fas fa-caret-up'></i>";
   }
 }
 
