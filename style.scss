@@ -1,10 +1,10 @@
 ---
 ---
 
-$primary-color: #171721;
+$primary-color: #290405;
 $secondary-color: #d1d1d1;
 $selected-color: #c7ffc9;
-$bg-color: #2e2f4a;
+$bg-color: #921b1d;
 
 html {
   scroll-behavior: smooth;
@@ -108,7 +108,7 @@ button:disabled {
   width: 100%;
 
   &.active {
-    background-color: black;
+    background-color: darken($primary-color, 5%);
   }
 }
 
